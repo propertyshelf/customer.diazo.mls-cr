@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layers>
+  <layer
+      name="customer.diazo.mlscr_com"
+      interface="customer.diazo.mlscr_com.interfaces.ICustomerDiazoMlscrComLayer"
+      remove="True"
+      />
+</layers>
