@@ -5,22 +5,43 @@
     xmlns:xi="http://www.w3.org/2001/XInclude">
 
 
-  <!-- <rules css:if-content="#visual-portal-wrapper"> -->
+  <rules css:if-content="#visual-portal-wrapper">
 
     <!-- Include ps.diazo.vanilla as a base theme. -->
-    <!-- <xi:include href="/++theme++ps.diazo.vanilla/rules.xml"/> -->
+    <xi:include href="/++theme++ps.diazo.vanilla/rules.xml"/>
 
-    <!-- <after css:theme-children="html head"> -->
+    <after css:theme-children="html head">
       <!-- Add custom stylesheet. -->
-      <!-- <link rel="stylesheet" href="{$portal_url}/++theme++customer.diazo.mlscr_com/static/main.css" type="text/css" /> -->
+      <link rel="stylesheet" href="{$portal_url}/++theme++customer.diazo.mlscr_com/static/main.css" type="text/css" />
 
       <!-- Add custom JavaScript. -->
-      <!-- <script src="{$portal_url}/++theme++customer.diazo.mlscr_com/static/main.js"></script> -->
+      <script src="{$portal_url}/++theme++customer.diazo.mlscr_com/static/main.js"></script>
 
       <!--Include Google Fonts. -->
-      <!-- <link href='http://fonts.googleapis.com/css?family=Alegreya:400,700' rel='stylesheet' type='text/css' /> -->
-    <!-- </after> -->
+      <link href='http://fonts.googleapis.com/css?family=Alegreya:400,700' rel='stylesheet' type='text/css' />
+    </after>
+      
+    </rules>
+    
 
-  <!-- </rules> -->
+    <rules css:if-content="#portal-header">
+      <append 
+        css:content-children=".socialheader .toolkit" 
+        css:theme=".logo-wrapper .logo"
+          method="raw"
+      />
+      <drop css:theme="#account-personaltools"/>
+    </rules>
+
+    <rules css:if-content="#portal-breadcrumbs">
+      <after
+        css:content="#portal-breadcrumbs"
+        css:theme="#navigation"
+        method="raw"
+      />
+      <drop css:content="#portal-breadcrumbs"/>
+    </rules>
+
+
 
 </rules>
