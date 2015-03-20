@@ -6,13 +6,7 @@ function div_full_width(){
     if($('.full_mls_search').length>0){   
         $('#wrapper-inner').after('<div class="ps_full_width">&nbsp;</div>');
         $('.full_mls_search').prependTo('.ps_full_width');
-    }
-}
-function embed_im_map(){
-    embedmap = $(".embed_im").children("div.full_map");
-    
-    if($('.full_mls_search').length>0){   
-        $(embedmap).prependTo(".ps_full_width .full_mls_search");
+        $(".full_map").insertBefore(".full_mls_search .listing-search-tile .rowlike");
     }
 }
 
@@ -24,7 +18,6 @@ function Add_class_breadcrumbs(){
 $(document).ready(function(){
     if($('body.template-view').length>0){   
         div_full_width();
-        embed_im_map();
     }
 
     Add_class_breadcrumbs();
