@@ -22,7 +22,12 @@
     </after>
       
     </rules>
-    
+
+    <after css:theme-children=".logo-wrapper .logo" method="raw">
+      <div class="header_descript">
+        <h2><xsl:value-of select="$header_descript" /></h2>
+      </div>
+    </after>
 
     <rules css:if-content="#portal-header">
       <append 
