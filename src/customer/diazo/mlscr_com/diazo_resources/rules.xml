@@ -35,7 +35,7 @@
         css:theme=".logo-wrapper .logo"
           method="raw"
       />
-      <drop css:theme="#account-personaltools"/>
+      <drop css:theme="#header-tools"/>
     </rules>
 
     <rules css:if-content="#portal-breadcrumbs">
